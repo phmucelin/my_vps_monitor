@@ -1,3 +1,8 @@
+#define CRITICALITY_LOW       1
+#define CRITICALITY_MEDIUM    2
+#define CRITICALITY_HIGH      3
+#define CRITICALITY_CRITICAL  4
+
 typedef struct{
   char id[64];
   char name[128];
@@ -5,6 +10,7 @@ typedef struct{
   char image[256];
   
   int running;
+  int criticality;
 
 }docker_container;
 
